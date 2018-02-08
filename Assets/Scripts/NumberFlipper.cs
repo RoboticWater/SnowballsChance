@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class NumberFlipper : MonoBehaviour {
 	public bool runAtStart = false;
-	[SerializeField]
 	private Animator animator;
+	private AudioSource sound;
 	[SerializeField]
 	private NumberFlipper next;
 
 	// Use this for initialization
 	void Start () {
+		animator = GetComponent<Animator> ();
+		sound = GetComponent<AudioSource> ();
 		if (runAtStart) StartCoroutine(begin ());
 	}
 	
@@ -22,9 +24,11 @@ public class NumberFlipper : MonoBehaviour {
 	public IEnumerator begin() {
 		yield return new WaitForSeconds (3);
 		animator.Play ("Flip");
+
 	}
 
 	public void flipNext() {
+		sound.Play ();
 		if (next)
 			next.flip ();
 	}
