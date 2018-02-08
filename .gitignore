@@ -3,5 +3,5 @@ Library
 Temp
 *.suo
 *.csproj
-./ShaderForge
-./PostProcessing
+ShaderForge
+PostProcessing
