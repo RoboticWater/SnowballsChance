@@ -20,6 +20,9 @@ public class Flicker : MonoBehaviour {
 		mat.SetFloat ("_flicker_offset", Random.value);
 		mat.SetFloat ("_u_flicker", Random.Range(0.25f, 0.5f));
 		flickerCeil = flickerMax / 3;
+		#if UNITY_STANDALONE_OSX
+		mat.SetColor ("_emissive_color", ColorUtility.TryParseHtmlString ("#FF460FFF"));
+		#endif
 	}
 	
 	// Update is called once per frame

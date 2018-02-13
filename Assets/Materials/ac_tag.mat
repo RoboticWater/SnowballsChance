@@ -81,6 +81,6 @@ Material:
     - _ZWrite: 1
     - _vertex_power: 0.07
     m_Colors:
-    - _Color: {r: 0.6352725, g: 0.75468314, b: 0.9191176, a: 1}
+    - _Color: {r: 0.33333334, g: 0.47843137, b: 0.68235296, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _uva_uvb: {r: 2, g: -0.3, b: 0.1, a: 0.3}

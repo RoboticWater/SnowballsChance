@@ -11,12 +11,22 @@ ModelImporter:
     100006: Plane
     100008: Plane_001
     100010: Plane_002
+    100012: ac_flapper
+    100014: ac_flapper_001
+    100016: ac_flapper_002
+    100018: ac_housing
+    100020: ac_vents
     400000: //RootNode
     400002: Cube
     400004: Cube_001
     400006: Plane
     400008: Plane_001
     400010: Plane_002
+    400012: ac_flapper
+    400014: ac_flapper_001
+    400016: ac_flapper_002
+    400018: ac_housing
+    400020: ac_vents
     2100000: unnamed
     2100002: Material
     2300000: Cube
@@ -24,16 +34,31 @@ ModelImporter:
     2300004: Plane
     2300006: Plane_001
     2300008: Plane_002
+    2300010: ac_flapper
+    2300012: ac_flapper_001
+    2300014: ac_flapper_002
+    2300016: ac_housing
+    2300018: ac_vents
     3300000: Cube
     3300002: Cube_001
     3300004: Plane
     3300006: Plane_001
     3300008: Plane_002
+    3300010: ac_flapper
+    3300012: ac_flapper_001
+    3300014: ac_flapper_002
+    3300016: ac_housing
+    3300018: ac_vents
     4300000: Plane_002
     4300002: Plane_001
     4300004: Plane
     4300006: Cube_001
     4300008: Cube
+    4300010: ac_flapper
+    4300012: ac_flapper_002
+    4300014: ac_flapper_001
+    4300016: ac_vents
+    4300018: ac_housing
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

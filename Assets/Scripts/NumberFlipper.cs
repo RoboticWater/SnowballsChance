@@ -4,16 +4,29 @@ using UnityEngine;
 
 public class NumberFlipper : MonoBehaviour {
 	public bool runAtStart = false;
+	public int numFlippers = 0;
+	[HideInInspector]
+	public NumberFlipper next;
+
 	private Animator animator;
 	private AudioSource sound;
-	[SerializeField]
-	private NumberFlipper next;
 
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
 		sound = GetComponent<AudioSource> ();
 		if (runAtStart) StartCoroutine(begin ());
+		GameObject prevFlipper = transform.gameObject;
+		//		GameObject flipper = Instantiate (transform.gameObject, prevFlipper.transform);
+		if (runAtStart) {
+			for (int i = 0; i < numFlippers; i++) {
+				Debug.Log (1);
+				GameObject flipper = Instantiate (transform.gameObject, prevFlipper.transform);
+				flipper.transform.position += new Vector3 (-0.35f, 0, 0);
+				prevFlipper.GetComponent<NumberFlipper> ().next = flipper.GetComponent<NumberFlipper> ();
+				prevFlipper = flipper;
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -27,8 +40,11 @@ public class NumberFlipper : MonoBehaviour {
 
 	}
 
-	public void flipNext() {
+	public void playFlipSound() {
 		sound.Play ();
+	}
+
+	public void flipNext() {
 		if (next)
 			next.flip ();
 	}
